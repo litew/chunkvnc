@@ -1,5 +1,3 @@
-# chunkvnc
-
 Chunkvnc
 ======
 
