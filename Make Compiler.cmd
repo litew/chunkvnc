@@ -1,0 +1,1 @@
+SRC\Aut2Exe\Aut2Exe.exe /in SRC\Compiler.au3 /out Compiler.exe /icon SRC\InstantSupport_Files\icon1.ico

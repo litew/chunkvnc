@@ -1,0 +1,314 @@
+Find the latest information and releases at:
+	http://www.chunkvnc.com
+	http://forum.ultravnc.info/viewforum.php?f=50
+
+This project is fueled by beer.
+If you'd like donate some please visit http://www.chunkvnc.com and click the donate button or contact me on the forum for a paypal address!
+
+Thanks to everyone that makes all of this possible! - supercoe
+
+
+#####################
+Release 3.3.1  9.12.11
+#####################
+
+Changes in this version:
+
+* Updated Compiler to exit if it detects a VNC server running othewise compile will fail.
+
+* Updated Compiler to automate the UltraVNC server in a different way for greater compatibility.
+
+* Updated Compiler to check if the SecureVNC plugin was configured correctly.
+
+* Updated Compiler to output to a temp directory and to display that directory after compiling.
+
+* Updated UPX to version 3.0.7
+
+* ChunkVNC now has an installer!
+
+
+
+#####################
+Release 3.3  9.6.11
+#####################
+
+Changes in this version:
+
+* Updated InstantSupport to allow connections through HTTP Proxys.
+
+* Updated InstantSupport to prompt Windows Security Alerts (Run or Cancel boxes) only once on first run.
+
+* Updated InstantSupport to fall back to LAN address if WAN address is unreachable.
+
+* Updated InstantSupport to exit if a connection to the repeater is impossible.
+
+* Updated InstantSupport GUI Window to display a bit faster on slower computers.
+
+* Updated InstantSupport GUI window to initially remain in front of other windows.
+
+* Updated InstantSupport with community fixes to hopefully get detected as a virus less often. http://forum.ultravnc.info/viewtopic.php?t=27789
+
+* Updated InstantSupport so the script shouldn't accidentally pause itself during startup.
+
+* Updated InstantSupport so it exits the VNC server more elegantly when installing as a service.
+
+
+* Updated ChunkViewer to check if a connection to the repeater is possible.
+
+* Updated ChunkViewer BUGFIX: now correctly uses repeater LAN address.
+
+* Added ChunkViewer ini setting "AutoScale=1". *Change to 0 and the viewer window won't automatically resize.
+
+* Added ChunkViewer ini setting "Password=". Default connection password, for the lazy only. WARNING: Obviously insecure storing passwords in plain text!
+
+
+
+* Updated Compiler to use SecureVNC for hashing a password from 9 to 128 characters in length.
+
+
+
+* Added SRC\InstantSupport_Files\unblock.js script.
+
+* Updated UltraVNC server and viewer to version 1.0.9.6.1
+
+* Removed Mac InstantSupport. *Hasn't worked since OSX 10.5, hopefully will come back soon!
+
+* Removed Disable UAC tray item. *Use the Install Service tray item instead.
+
+* Removed VNC_HASH. *SecureVNC password hashing is automated by the compiler.
+
+* ChunkVNC no longer requires Microsoft Visual C++ 2005 Redistributable Package.
+
+* Various bug fixes / code cleanup.
+
+
+Known Issues:
+
+* HTTP proxy support requires that the repeater is running with a server port of 443.
+
+* You cannot install InstantSupport as a service if an HTTP Proxy is detected. *UltraVNC limitation.
+
+* The repeater log will show an error such as "Reading Proxy settings erro" when InstantSupport or ChunkViewer checks for its existence.
+
+
+
+#####################
+Release 3.2  11.28.10
+#####################
+
+Changes in this version:
+
+* Updated AutoIt Updated to 3.3.6.1
+
+* Updated InstantSupport UltraVNC server executable to a customized build of 1.0.9.4 removing some unneeded executable resources to reduce filesize.
+
+* Updated InstantSupport to use the latest SecureVNCPlugin.dsm plugin configured with a password for encryption.
+
+* Updated InstantSupport to no longer prompt to close the viewer first when uninstalling the service or exiting.
+
+* Updated InstantSupport to support commandline variables removing the need for ChunkVNC.au3.
+
+* Updated InstantSupport delete function to only remove specific files instead of an entire path.
+
+* Updated InstantSupport to close known VNC servers if another VNC server is running.
+
+* Updated InstantSupport to automatically switch to the LAN address if the WAN address fails.
+
+* Updated InstantSupport to exit if connection to the repeater fails.
+
+* Updated InstantSupport to support language strings in the first lines of code.
+
+* Updated InstantSupport shutdown message to make more sense.
+
+* Updated InstantSupport removing SCHook.dll and CAD.exe files to reduce filesize.
+
+* Updated InstantSupport polling settings to updated entire screen for more accurate screen updates.
+
+* Updated InstantSupport to allow disabling of UAC in Vista/7 to control administrative programs without installing as a service.
+
+* Updated InstantSupport to support disabling UAC to control administrative programs without installing as a service.
+
+
+
+* Updated ChunkViewer to include a LAN mode to get around routers that don't support loopback connections. You can switch modes by right clicking the ID combobox. The mode will retain it's previous setting.
+
+* Updated ChunkViewer UltraVNC viewer executable to 1.0.9.4 which prevents UAC prompts closing the viewer.
+
+* Updated ChunkViewer to use the latest SecureVNCPlugin.dsm for encryption. A password set by the compiler is now required to connect to InstantSupport.
+
+
+
+* Updated Compiler for viewer LAN mode.
+
+* Updated Compiler with a python script to generate VNC hashed passwords. -Thanks mixmastamyk http://forum.ultravnc.info/viewtopic.php?p=80709
+
+* Updated Compiler to limit the password to 8 characters and fail if the password contains a space.
+
+
+
+* Updated all scripts so they won't run unless compiled.
+
+* Updated all scripts to compile using Obfuscator to reduce file size.
+
+* Added Perl repeater for Linux and shared hosting accounts.
+
+* Added Make Compiler batch file for those who wish to compile the Compiler.
+
+
+
+Known Issues:
+
+* Compiler now requires Microsoft Visual C++ 2005 Redistributable Package for the password hashing executable. If it isn't installed compiling will fail!
+
+* You will not be able to control programs that required UAC to start unless you install as a service or disable UAC.
+
+* After disabling UAC if InstantSupport isn't closed properly UAC will remain disabled.
+
+
+
+TODO:
+
+* Safe mode support.
+
+
+
+
+#####################
+Release 3.1  1.19.10
+#####################
+
+Changes in this version:
+
+* Updated UltraVNC server to pgmoney's custom compile, now the viewer will stay open during UAC prompts.
+
+* Updated InstantSupport Windows to only use ID's 200000 to 999999
+
+* Updated InstantSupport Windows to prompt user to close the viewer so schook.dll won't be left behind.
+
+* Updated ChunkViewer to only allow 6 digit numbers. - Thanks Guiness
+
+* Updated ChunkViewer so you can press the enter key instead of clicking connect. - Thanks Guiness
+
+* Updated ChunkViewer to add a right click menu to the ID combobox with "Clear History" and "About" - Thanks Guiness
+
+* Updated ChunkViewer to show you the repeater address in the GUI. - Thanks Guiness
+
+* Updated ChunkViewer so ID's 100000 to 200000 will connect without encryption. ( For Mac InstantSupport )
+
+* Updated InstantSupport Mac to display a dialog box with the ID number by utilizing CoacaDialog 2.1.1
+
+* Updated InstantSupport Mac to only use ID's 100000 to 200000
+
+* Reduced InstantSupport file size.
+
+
+Known Issues:
+
+* If the viewer isn't closed when InstantSupport prompts you to close it schook.dll will be left behind. This will cause high CPU usage while it trys to delete the file.
+
+
+Items of note:
+
+* If you would like a smaller filesize for InstantSupport Mac and don't have a Mac to compress it yourself just buy me a beer and I'll make one for you!
+
+* If you never use the viewer outside the LAN that your repeater is running on you don't need to forward port 5901, this will add extra security by not allowing a viewer to connect to the repeater outside of your LAN.
+
+
+
+#####################
+Release 3.0  1.10.10
+#####################
+
+Changes in this version:
+
+* Added ChunkViewer to automate vncviewer.exe, enter an ID and click connect!
+
+* Added all of AutoIt's includes for maximum AutoIt code compatability.
+
+* Added Installation Guide.pdf
+
+* Updated AutoIt compiler to version 3.2.12.1 
+
+* Updated ultravnc.ini: AllowLoopBack=1 so the repeater PC can use InstantSupport.
+
+* Updated the compiler to automate the creation of the encryption key.
+
+* Updated the MSRC4 plugin.
+
+* Updated InstantSupport to let you choose an ID for permanent installations.
+
+* Removed RepeaterHelper as it wasn't needed.
+
+* Should be less false positives of InstantSupport.exe getting detected as a virus.
+
+* Executable is now compiled as Unicode instead of ANSI.
+
+* New passwords to generate a stronger MSRC4 checksum?: uVNC@2go, uVNC@2view
+
+* Temporary directory is removed after program termination.
+
+* Reduced InstantSupport file size.
+
+
+
+
+
+#####################
+Release 2.0  12.13.09
+#####################
+
+Changes in this version:
+
+* Updated UltraVNC server and viewer to version 1.0.8.2
+
+* Added SRC/RepeaterHelper.au3 (compiles to the repeater directory) This program runs in the tray and restarts repeater108.exe in case of a crash. It is recommended to turn off error reporting on the repeater108.exe.
+
+* Edits of ultravnc.ini for performance: MaxCPU=50, TurboMode=1, RemoveWallpaper=1
+
+* Added initial support for Mac OSx consult ReadME.txt in the OSX directory.
+
+* Small changes here and there to simplify the source code.
+
+
+Known Issues:
+
+* schook.dll is sometimes left behind after uninstall.
+
+* Install Service only works on a domain if you are logged in as a domain administrator.
+
+* InstantSupport eventually stops auto-reconnecting to the repeater after many retry.
+
+
+Items of note:
+
+* Big thanks to the developers of x11vnc for making it possible to implement Mac/Linux support! http://www.karlrunge.com/x11vnc/
+
+* Mac/Unix viewer is available at http://www.karlrunge.com/x11vnc/ssvnc.html 
+
+* Using the SecureVNC plugin causes the server to crash upon exit http://adamwalling.com/SecureVNC/
+
+
+
+
+#####################
+Release 1.0  11.22.09
+#####################
+
+Changes in this version:
+
+* None, first official release.
+
+TODO List:
+
+* Allow the user to choose the ID number when installing the service.
+* Tray menu should contain a list of common software tools.
+* InstantSupport should check to see if the ID is already in use.
+* Add Mac and Linux support.
+
+Known Issues:
+
+* UAC prompts disconnect the server which closes the viewer, install as service to get around UAC.
+* Viewer sometimes says "Socket Error" when connecting. The second try always works.
+* InstantSupport should check to see if it's already running.
+
+This release includes the 1.0.8.0 version of the UltraVNC server. You can find a list of changes and known issues for this version of the server on the UltraVNC forum.
